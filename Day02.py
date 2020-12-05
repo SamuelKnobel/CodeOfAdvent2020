@@ -11,10 +11,11 @@ def lineParser(inputString: str):
 # PART 1
 data = pd.read_table("Data/inputDay02.txt", header=None)
 df = pd.DataFrame(map(lineParser, data[0]))
+
 countArray = [df["pw"][lineIndex].count(df["letter"][lineIndex]) for lineIndex in range(len(df["pw"]))]
 df['valid_Part1'] = (countArray<= df['upper'].values.astype(np.int)) & (countArray>= df['lower'].values.astype(np.int))
 
-print(len(df['valid_Part1'][df['valid_Part1']== True]))
+print(len(df['valid_Part1'][df['valid_Part1'] == True]))
 
 
 # PART 2
