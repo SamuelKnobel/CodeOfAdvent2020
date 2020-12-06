@@ -1,7 +1,8 @@
 
 import re
 
-with open("Data/inputDay04.txt") as f:
+#with open("Data/inputDay04.txt") as f:
+with open("Data/input_dec_4.txt") as f:
     rawData  = f.read().splitlines()
 
 counter = 1
