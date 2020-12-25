@@ -89,6 +89,9 @@ def check_left_neighbour(line: int, position: int, fullarray):
             if n == "#":
                 neigbour_exists= True
                 break
+            elif n == "L":
+                neigbour_exists = False
+                break
             else:
                 pos_index = pos_index-1
     return neigbour_exists
@@ -103,6 +106,9 @@ def check_right_neighbour(line: int, position: int, fullarray):
             n = fullarray[line][pos_index]
             if n == "#":
                 neigbour_exists= True
+                break
+            elif n == "L":
+                neigbour_exists = False
                 break
             else:
                 pos_index = pos_index+1
@@ -119,6 +125,9 @@ def check_bottom_neighbour(line: int, position: int, fullarray):
             if n == "#":
                 neigbour_exists= True
                 break
+            elif n == "L":
+                neigbour_exists = False
+                break
             else:
                 line_index=line_index+1
     return neigbour_exists
@@ -133,6 +142,9 @@ def check_top_neighbour(line: int, position: int, fullarray):
             n = fullarray[line_index][position]
             if n == "#":
                 neigbour_exists= True
+                break
+            elif n == "L":
+                neigbour_exists = False
                 break
             else:
                 line_index=line_index-1
@@ -149,6 +161,9 @@ def check_top_left_neighbour(line: int, position: int, fullarray):
             n = fullarray[line_index][pos_index]
             if n == "#":
                 neigbour_exists= True
+                break
+            elif n == "L":
+                neigbour_exists = False
                 break
             else:
                 line_index=line_index-1
@@ -167,6 +182,9 @@ def check_bottom_left_neighbour(line: int, position: int, fullarray):
             if n == "#":
                 neigbour_exists= True
                 break
+            elif n == "L":
+                neigbour_exists = False
+                break
             else:
                 line_index=line_index+1
                 pos_index=pos_index-1
@@ -184,6 +202,9 @@ def check_bottom_right_neighbour(line: int, position: int, fullarray):
             if n == "#":
                 neigbour_exists= True
                 break
+            elif n == "L":
+                neigbour_exists = False
+                break
             else:
                 line_index=line_index+1
                 pos_index=pos_index+1
@@ -200,6 +221,9 @@ def check_top_right_neighbour(line: int, position: int, fullarray):
             n = fullarray[line_index][pos_index]
             if n == "#":
                 neigbour_exists= True
+                break
+            elif n == "L":
+                neigbour_exists = False
                 break
             else:
                 line_index=line_index-1
